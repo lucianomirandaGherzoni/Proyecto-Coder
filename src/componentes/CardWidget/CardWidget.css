@@ -1,0 +1,14 @@
+.imagenCarrito{
+    width: 100px;
+}
+.carrito{
+    display: flex;
+    align-items: center;
+}
+.numeroCarrito{
+    color:black;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    font-size: 12px;
+}
