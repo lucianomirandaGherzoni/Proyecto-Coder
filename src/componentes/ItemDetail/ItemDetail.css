@@ -1,0 +1,23 @@
+.contenedor-detalles {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: #f1f8cb;
+    font-style: oblique;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.contenedor-imagen img {
+    max-width: 500px;
+    object-fit: contain;
+    border-radius: .5rem;
+}
+.contenedor-descripcion{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}

@@ -1,19 +1,19 @@
-import React from 'react';
 import CardWidget from '../CardWidget/CardWidget';
 import "./NavBar.css";
+import { Link, NavLink } from 'react-router-dom';
 
 
 const NavBar = () => {
-    const logoBerlini = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYxtDBRkBui1KpOihJwv8xH72Pudt9LKdNQrGmRjDT22te7AKjwcOz_mZlQtYeHAkxM18&usqp=CAU";
+    const logoBerlini = "../img/logo.png";
     return (
         <header>
-            <img className='logo' src={logoBerlini} alt="logo berlini" /> {/*No pude poner la imagen del logo que esta en la carpeta img probe con = {./img/logo.png y con ../img/logo.png} */}
+          <Link to="/"><img className='logo' src={logoBerlini} alt="logo berlini" /> </Link>
             <nav>
                 <ul>
-                    <li>inicio</li>
-                    <li>Productos</li>   {/*Aca iria un dropdown con un <ul> y tres <li> con los items {Sorrentinos, Tallarines, Salsas} */}
-                    <li>Sobre Nosotros</li>
-                    <li>Contacto</li>
+                    <li><NavLink to="/"> Inicio </NavLink></li>
+                    <li><NavLink to="categoria/1">Sorrentinos</NavLink></li>   {/*Aca iria un dropdown con un <ul> y tres <li> con los items {Sorrentinos, Tallarines, Salsas} */}
+                    <li><NavLink to="categoria/2">Tallarines</NavLink></li>
+                    <li><NavLink to= "categoria/3">Salsas</NavLink></li>
                     <li><CardWidget/></li>
                 </ul>
             </nav>

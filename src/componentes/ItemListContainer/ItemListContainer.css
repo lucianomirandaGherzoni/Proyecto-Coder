@@ -1,14 +1,9 @@
-h1,h4{
-
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
-    font-style: italic;
+*{
+    margin: 0px;
+    padding: 0px;
+    font-style: oblique;
 }
-.hero{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-margin: auto;
-min-height: 80vh;
-background-image: url(); /*imagen de fondo berlini*/
+.contenido-principal{
+    text-align: center;
+    padding: 1rem;
 }
