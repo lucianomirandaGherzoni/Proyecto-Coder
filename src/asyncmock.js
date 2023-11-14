@@ -6,7 +6,7 @@ const productosBerlini = [
     { id: "5", nombre: "Tallarines", stock: 10, precio: 1800, img: "../img/tallarines.jpg", idCat:"2" },
     { id: "6", nombre: "Tallarines", stock: 10, precio: 1800, img: "../img/tallarines.jpg", idCat:"2" },
     { id: "7", nombre: "Tallarines", stock: 10, precio: 1800, img: "../img/tallarines.jpg", idCat:"2" },
-    { id: "8", nombre: "Salsas", stock: 10, precio: 1000, img: "../img/salsa.jpg", idCat:"3" },
+    { id: "8", nombre: "Salsas", stock: 10, precio: 1000, img: "../img/salsas.jpg", idCat:"3" },
     { id: "9", nombre: "Salsas", stock: 10, precio: 1000, img: "../img/salsa.jpg", idCat:"3" },
     { id: "10", nombre: "Salsas", stock: 10, precio: 1000, img: "../img/salsa.jpg", idCat:"3" },
 ]
