@@ -1,0 +1,10 @@
+.carruselAltura{
+    max-height:90vh;
+    width: 100%;
+}
+.indicadores-carrusel{
+    max-width: 100%
+}
+.img{
+    aspect-ratio: 16 / 9 ;
+}

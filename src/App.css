@@ -1,0 +1,9 @@
+:root{
+
+    --clr-negro: #0000;
+    --clr-blanco: #FFF4F4;
+    --clr-claro: #D6CC99;
+    --clr-oscuro: #445D48;
+
+    font-family: 'Poppins', sans-serif;
+}
