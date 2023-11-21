@@ -1,9 +1,6 @@
 .productoCard{
-    background-color:#f1f8cb;
-    padding: .5rem;
-    width: 20rem;
+    background-color:var(--clr-blanco);
     margin: 1rem;
-    padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -13,21 +10,23 @@
 
 }
 .productoCard img{
-    width: 300px;
-    object-fit: contain;
-    border-radius: 1rem;
+    width: 100%;
+    object-fit: cover;
 
 }
 
 .productoCard a {
     text-decoration: none;
-    border-radius: 5px;
+    text-align: center;
     padding: 10px;
-    background-color: #000;
-    color: white;
+    background-color: var(--clr-oscuro);
+    color: var(--clr-blanco);
+    border-top: 1px solid var(--clr-oscuro);
+    margin: 0rem;
+    width: 100%;
 }
 .productoCard a:hover {
-    background-color: gray;
-    color: #000;
-    transition: .2s;
+    background-color:var(--clr-blanco);
+    color: var(--clr-oscuro);
+    transition: all .3s;
 }

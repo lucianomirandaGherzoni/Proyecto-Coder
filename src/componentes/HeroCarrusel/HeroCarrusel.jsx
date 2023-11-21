@@ -8,38 +8,50 @@ const HeroCarrusel = () => {
 
     return (
         <>
-        <div className='hero-content'>
-            
-        <div id="carouselExampleIndicators"  class="carousel slide">
-                <div className="carousel-indicators indicadores-carrusel ">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <div className='hero-content'>
+
+                <div id="carouselExampleIndicators" className="carousel slide">
+                    <div className="carousel-indicators indicadores-carrusel ">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div className="carousel-inner carruselAltura">
+                     
+                        <div className="carousel-item">
+                            <img src={imgDos} className="d-block w-100 img" alt="Berlini Pastas Imagenes" />
+                            <div className="carousel-caption2">
+                               <img src="../img/logo.png" alt="logoBerlini"/>
+                            </div>
+                      
+                        </div>
+                        <div className="carousel-item active">
+                            <img src={imgUno} className="d-block w-100 img" alt="Berlini Pastas Imagenes" />
+                            <div className="carousel-caption">
+                                <h2 className="descripcion-imagen"><strong>20%</strong> Descuento en todos los productos de la web.</h2>
+                                <button> Ver Productos </button>
+                            </div>
+                        </div>
+                        <div className="carousel-item">
+                            <img src={imgTres} className="d-block w-100 img" alt="Berlini Pastas Imagenes" />
+                            <div className="carousel-caption3">
+                               <img src="../img/logo-berlini.png" alt="logoBerlini"/>
+                            </div>
+                        </div>
+                    </div>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <div className="carousel-inner carruselAltura">
-                    <div className="carousel-item active">
-                        <img src={imgUno} class="d-block w-100 img" alt="..." />
-                    </div>
-                    <div className="carousel-item">
-                        <img src={imgDos} class="d-block w-100 img" alt="..." />
-                    </div>
-                    <div class="carousel-item">
-                        <img src={imgTres} class="d-block w-100 img" alt="..." />
-                    </div>
-                </div>
-                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                </button>
-                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                </button>
+
+
             </div>
-            
-            
-        </div>
-            
+
         </>
     )
 }

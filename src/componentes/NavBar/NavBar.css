@@ -1,22 +1,63 @@
-.logo{
-    width:150px;
+.logo {
+    width: 150px;
 }
-.navbar-boostrap{
+
+.navbar-boostrap {
     display: flex;
-    gap:45%;
+    gap: 40%;
 }
-.navbar-color{
-    background-color: var(--clr-oscuro)!important;
+.navbar-item{
+    color: var(--clr-claro);
 }
-.dropdown-item.active{
-    background-color: var(--clr-claro)!important;
-    color: var(--clr-negro);
+.navbar-color {
+    background-color: var(--clr-oscuro) !important;
+    padding: 0px;
 }
+
+#navbarSupportedContent>ul>li.nav-item.dropdown>ul {
+    background-color: var(--clr-oscuro) !important;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: var(--clr-oscuro);
+    text-decoration: none;
+    background-color: var(--clr-claro);
+}
+
+.dropdown-item:hover {
+    background-color: transparent;
+    color: var(--clr-claro);
+}
+
+.navbar-toggler {
+    color: var(--clr-claro);
+}
+
+.navbar-nav .nav-link.active:hover {
+    color: var(--clr-claro);
+}
+
+.nav-link:active {
+    color: var(--clr-claro);
+}
+.navbar-nav .dropdown-menu {
+border-style: none;
+}
+
+
 @media screen and (max-width: 768px) {
 
-    .navbar-boostrap{
-      gap:0%;
-      }
-    
+    .navbar-boostrap {
+        gap: 0%;
     }
-  
+
+}
+
+@media (min-width: 1200px) {
+    .navbar-boostrap {
+        display: flex;
+        gap: 50%;
+    }
+    
+  }

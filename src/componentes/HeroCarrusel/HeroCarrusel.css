@@ -1,5 +1,5 @@
 .carruselAltura{
-    max-height:90vh;
+    height:90vh;
     width: 100%;
 }
 .indicadores-carrusel{
@@ -7,4 +7,80 @@
 }
 .img{
     aspect-ratio: 16 / 9 ;
+    object-fit: cover;
+    height: 90vh;
 }
+
+.carousel-caption {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: 20rem;
+    
+  }
+  .carousel-caption button{
+    padding: .3rem;
+    border: none;
+    background-color: transparent;
+    color: var(--clr-blanco);
+    border-bottom: 1px solid var(--clr-claro);
+  }
+  .carousel-caption button:hover{
+    color: var(--clr-claro);
+    transition: all .2s;
+  }
+  .descripcion-imagen {
+    color: var(--clr-claro);
+    font-size: 24px;
+    text-align: center;
+  }
+  .carousel-caption2{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: 12rem;
+    height: 12rem;
+    background-color: var(--clr-negro);
+    border-radius: 100%;
+  }
+  .carousel-caption2 img , .carousel-caption3 img{
+    width: 200px;
+  }
+  .carousel-caption3{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  
+  @media (max-width: 992px)  {
+   .carousel-caption{
+    text-align: center;
+    left: 50%;
+    background-color: #0000007a;
+    height: fit-content;
+    padding: 1rem  2rem 2rem 1rem;
+    width: 100%;
+   }
+   .carousel-caption h2{
+    color: var(--clr-blanco);
+   }
+   .carousel-caption h2 strong{
+    color: var(--clr-claro);
+   }
+
+  }

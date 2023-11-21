@@ -5,14 +5,14 @@ import "./CardWidget.css";
 
 const CardWidget = () => {
     const { cantidadTotal } = useContext(CarritoContext);
-    const imgCarrito = "https://static.vecteezy.com/system/resources/previews/016/097/159/original/eps10-white-online-shopping-cart-icon-or-logo-isolated-on-black-background-trolley-with-home-symbol-in-a-simple-flat-trendy-modern-style-for-your-website-design-logo-and-mobile-application-vector.jpg";
+    
     return (
 
         <Link to="/cart">
             <div className='carrito'>
-                <img className='imagenCarrito' src={imgCarrito} alt="Carrito de compras" />
+            <i className="bi bi-cart2"></i>
                 {
-                    cantidadTotal > 0 && <strong> {cantidadTotal} </strong>
+                    cantidadTotal > 0 && <strong className='numerito'> {cantidadTotal} </strong>
                 }
             </div>
         </Link>
