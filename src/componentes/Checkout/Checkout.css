@@ -3,36 +3,53 @@ text-align: center;
 padding: 1rem;
 background-color: var(--clr-claro);
 color: var(--clr-oscuro);
+margin: 0px;
 }
 .item-carrito{
     display: flex; 
+    flex-wrap: wrap;
     border-bottom: 2px solid var(--clr-oscuro);
     align-items: center;
     width: fit-content;
     margin: 1rem;
 }
 form{
-    margin: 2rem;
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    padding: 1rem;
+    background-image: url('https://hazlovegan.com/wp-content/uploads/2021/03/sorrentinos-veganos-21-1024x683.jpg?ezimgfmt=ng:webp/ngcb1');
+    background-size: cover;
+    background-position: center;
+   
+}
+.fin-compra{
+    margin-top: 10px;
+    color: var(--clr-blanco);
+    background-color: var(--clr-oscuro);
+    width: fit-content;
+    padding: 10px;
 }
 form div {
     display: flex;
     align-items: center;
-    
+    margin: 0;
+    border-bottom: 1px solid var(--clr-oscuro);
+    background-color: var(--clr-oscuro);
+    padding:1rem;
+    width: 370px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--clr-blanco);
     
 }
-form div label {
-    margin-right: 10px;
-}
+
 form button{
-    background-color: var(--clr-claro);
-    color: var(--clr-oscuro);
-    padding: .5rem;
-    border-radius: 10px;
+    background-color: var(--clr-oscuro);
+    color: var(--clr-blanco);
+    padding: 1rem;
     border-style: none;
+    margin-top: 1rem;
 }

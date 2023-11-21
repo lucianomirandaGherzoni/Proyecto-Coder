@@ -1,8 +1,7 @@
 import React from 'react'
 import CardWidget from "../CardWidget/CardWidget";
 import "./NavBar.css";
-import { Link, NavLink } from 'react-router-dom';
-
+import { NavLink, Link } from 'react-router-dom';
 const NavBar = () => {
     const logoBerlini = "../img/logo.png";
     return (
@@ -20,7 +19,7 @@ const NavBar = () => {
                                 <NavLink className="nav-link active" to="/"> Inicio </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link active" to="/"> Contacto </NavLink>
+                                <a href="#footer"  className="nav-link active">Contacto</a>
                             </li>
 
                             <li className="nav-item dropdown">
@@ -35,11 +34,11 @@ const NavBar = () => {
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link active" to="/"> Acerca de Nosotros </NavLink>
+                               <a href="#about"  className="nav-link active">Acerca de Berlini</a>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link active" to="/card"> <CardWidget/> </NavLink>
-                            </li> 
+                                <div className="nav-link active" > <CardWidget /> </div>
+                            </li>
                         </ul>
 
                     </div>

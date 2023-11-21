@@ -4,7 +4,7 @@
 
 .navbar-boostrap {
     display: flex;
-    gap: 40%;
+    gap: 30%;
 }
 .navbar-item{
     color: var(--clr-claro);

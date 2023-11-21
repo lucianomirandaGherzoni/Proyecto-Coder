@@ -1,5 +1,5 @@
 .carruselAltura{
-    height:90vh;
+    height:100vh;
     width: 100%;
 }
 .indicadores-carrusel{
@@ -8,7 +8,7 @@
 .img{
     aspect-ratio: 16 / 9 ;
     object-fit: cover;
-    height: 90vh;
+    height: 100vh;
 }
 
 .carousel-caption {
@@ -32,6 +32,9 @@
     color: var(--clr-claro);
     transition: all .2s;
   }
+
+
+
   .descripcion-imagen {
     color: var(--clr-claro);
     font-size: 24px;

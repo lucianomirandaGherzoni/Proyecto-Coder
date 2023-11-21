@@ -10,13 +10,13 @@
 .card-carrito button{
     background-color: var(--clr-blanco);
     border-style: none;
-    color: var(--clr-oscuro);
+    color: rgb(248, 72, 72);
     font-size: 1.5rem;
     
 }
 .card-carrito button:hover{
     transition: .5s;
-    color: red;
+    color:var(--clr-oscuro);
 }
 .card-carrito h4{
     padding: .5rem;

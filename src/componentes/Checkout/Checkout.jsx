@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import { CarritoContext } from "../../context/CarritoContext";
 import { db } from "../../services/config";
 import { collection, addDoc, updateDoc, doc, getDoc } from "firebase/firestore";
@@ -15,25 +15,22 @@ const Checkout = () => {
 
     const {carrito, vaciarCarrito, total, totalCantidad} = useContext(CarritoContext);
 
-    //Funciones y validaciones: 
+ 
 
     const manejadorFormulario = (event) => {
         event.preventDefault();
 
-        //Verificamos que los campos esten completos: 
         if(!nombre || !apellido || !telefono || !email || !emailConfirmacion) {
             setError("Por favor completa todos los campos o moriras!!");
             return;
         }
 
-        //Validamos que los campos del email coincidan: 
+
 
         if(email !== emailConfirmacion) {
             setError("Los campos del email no coinciden, malditooo insecto!!");
             return;
         }
-
-        //1) Creamos un objeto con todos los datos de la orden de compra: 
 
         const orden = {
             items: carrito.map(producto => ({
@@ -49,27 +46,20 @@ const Checkout = () => {
             email
         };
 
-        //////////////////////////////////////////////////////
-
-        //Vamos a modificar el código para que ejecute varias promesas en paralelo, por un lado que actualice el stock de productos y por el otro lado que genere una orden de compra. 
-        //Vamos a usar para lograr esto: Promise.All
 
         Promise.all(
             orden.items.map( async (productoOrden) => {
                 const productoRef = doc(db, "productos", productoOrden.id);
-                //Por cada producto en la colleción "productos" obtengo una referencia, y a partir de esa referencia obtengo el DOC. 
                 const productoDoc = await getDoc(productoRef);
                 const stockActual = productoDoc.data().stock;
-                //Data es un método que me permite acceder a la información del documento. 
 
                 await updateDoc( productoRef, {
                     stock: stockActual - productoOrden.cantidad
                 })
-                //Modifico el stock y subo la información actualizada. 
             })
         )
         .then(() => {
-            //Guardamos la orden en la base de datos: 
+
             addDoc(collection(db, "ordenes"), orden)
             .then(docRef => {
                 setOrdenId(docRef.id);
@@ -77,12 +67,12 @@ const Checkout = () => {
             })
             .catch( error => {
                 console.log("Error al crear la orden", error);
-                setError("Se produjo un error al crear la orden, vamos a morir!!!");
+                setError("Se produjo un error al crear la orden.");
             })
         })
         .catch((error) => {
             console.log("No se pudo actualiza rel stock", error);
-            setError("No se puede actualizar el stock, intente en el supermercado Vital");
+            setError("Se produjo un error al actualizar el stock.");
         })
 
     }
@@ -93,8 +83,8 @@ const Checkout = () => {
         {
                 carrito.map(producto => (
                     <div key={producto.item.id} className="item-carrito">
-                        <p> {producto.item.nombre} x {producto.cantidad} </p>
-                        <p>{producto.item.precio}</p>
+                        <p> {producto.item.nombre} x {producto.cantidad}</p>
+                     
                         <hr />
                     </div>
                 ))
@@ -103,27 +93,27 @@ const Checkout = () => {
            
             <div>
                 <label htmlFor="">Nombre</label>
-                <input type="text" onChange={(e)=> setNombre(e.target.value)} />
+                <input type="text" placeholder="Nombre" onChange={(e)=> setNombre(e.target.value)} />
             </div>
 
             <div>
                 <label htmlFor="">Apellido</label>
-                <input type="text" onChange={(e)=> setApellido(e.target.value)} />
+                <input type="text" placeholder=" Apellido"onChange={(e)=> setApellido(e.target.value)} />
             </div>
 
             <div>
                 <label htmlFor="">Telefono</label>
-                <input type="text" onChange={(e)=> setTelefono(e.target.value)} />
+                <input type="text" placeholder="Telefono"onChange={(e)=> setTelefono(e.target.value)} />
             </div>
 
             <div>
                 <label htmlFor="">Email</label>
-                <input type="email" onChange={(e)=> setEmail(e.target.value)} />
+                <input type="email" placeholder="Email"onChange={(e)=> setEmail(e.target.value)} />
             </div>
 
             <div>
                 <label htmlFor="">Email Confirmación</label>
-                <input type="email" onChange={(e) => setEmailConfirmacion(e.target.value)}/>
+                <input type="email" placeholder="Email"onChange={(e) => setEmailConfirmacion(e.target.value)}/>
             </div>
 
             {
@@ -134,7 +124,7 @@ const Checkout = () => {
 
             {
                 ordenId && (
-                    <strong>¡Gracias por tu compra! Tu número de orden es: {ordenId} </strong>
+                    <strong className="fin-compra">¡Gracias por tu compra! Tu número de orden es: {ordenId} </strong>
                 )
             }
 

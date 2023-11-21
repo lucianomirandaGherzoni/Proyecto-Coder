@@ -1,21 +1,25 @@
 .contenedor-detalles {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--clr-claro);
-    
+    position: relative;
 }
+
 
 
 .card-detalles {
     display: flex;
-    width: 70%;
+    width: 100%;
+    height: 30%;
     gap: 1rem;
     background-color: var(--clr-blanco);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     border-radius: .5 rem;
+    position: relative;
+    z-index: 1;
  
 }
 
@@ -40,20 +44,46 @@
     align-items: center;
     width: 50%;
     padding-bottom: 1rem;
+    border-radius: 10px;
+    
+}
+.titulo-descripcion div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem;
+
+}
+.titulo-descripcion div h3 {
+    margin-right: 10px;
+}
+.titulo-descripcion h2 {
+    color: var(--clr-claro);
 }
 
+.fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://hazlovegan.com/wp-content/uploads/2021/03/sorrentinos-veganos-21-1024x683.jpg?ezimgfmt=ng:webp/ngcb1');
+    background-size: cover;
+    filter: grayscale(80%) blur(5px);
+  }
 .titulo-descripcion {
     color: var(--clr-oscuro);
-    
     font-size: 1.5rem;
     text-align: center;
     padding: 2rem;
     width: 100%;
 }
 .terminar-compra{
+
     background-color: var(--clr-oscuro);
     color: var(--clr-blanco);
-    padding: .5rem;
+    padding:10px;
+    
 }
 .buttom-detail{
     display: flex;
@@ -61,23 +91,22 @@
 @media (max-width: 768px) {
  .card-detalles{
     flex-direction: column;
-    width: 350px;
-    height: 600px;
+    width: 400px;
+    max-height : fit-content;
     border-radius: 0px;
-    padding-bottom: 0px;
+    margin: 2rem;
 
  } 
  .contenedor-imagen{
     width: 100%;
+
     border-radius: 0px;
-    height: 50%;
+    height: 200px;
  }
  
- .contenedor-imagen img{
-    border-radius: 0px;
- }
  .contenedor-descripcion{
     width: 100%;
+    height: fit-content;
     gap: .5rem;
     border-radius: 0px;
     padding-bottom: 0px;
@@ -85,5 +114,7 @@
  .titulo-descripcion{
     margin: 0;
     padding: 0;
+    min-height: 20rem;
  }
+
 }
