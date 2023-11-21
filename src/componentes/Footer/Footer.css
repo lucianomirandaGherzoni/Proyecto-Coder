@@ -60,3 +60,8 @@ footer i:hover{
     width: 100%;
     text-align: center;
 }
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+    }
+  }
