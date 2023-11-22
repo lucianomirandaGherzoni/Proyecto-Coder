@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import {getFirestore} from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD9wTUwy0qNr-j5jkJV4dEphVUIbVBGYiM",
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
     authDomain: "berlinipastas-db.firebaseapp.com",
     projectId: "berlinipastas-db",
     storageBucket: "berlinipastas-db.appspot.com",

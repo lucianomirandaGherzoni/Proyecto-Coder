@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-import BannerTitulo from "../BannerTitulo/BannerTitulo";
 import { db } from "../../services/config";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import "./ItemListContainer.css"
@@ -22,7 +21,6 @@ const ItemListContainer = () => {
                 })
                 setProductos(nuevosProductos);
             })
-            .catch(error => console.log(error))
     }, [idCategoria])
 
     return (

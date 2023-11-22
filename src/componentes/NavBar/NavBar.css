@@ -43,6 +43,8 @@
 }
 .navbar-nav .dropdown-menu {
 border-style: none;
+border-top: 2px solid var(--clr-claro);
+border-radius: 0px;
 }
 
 

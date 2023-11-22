@@ -26,7 +26,7 @@ const Cart = () => {
     return (
         <div className="items-carrito-card" >
             <div className="items-carrito">
-                { carrito.map(producto => <CartItem key= {producto.id} {...producto} />) }
+                { carrito.map(producto => <CartItem key= {producto.item.id} {...producto} />) }
             </div>
 
             <aside className="carrito-total">

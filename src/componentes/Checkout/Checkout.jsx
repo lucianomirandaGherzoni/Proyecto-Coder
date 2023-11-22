@@ -66,12 +66,10 @@ const Checkout = () => {
                 vaciarCarrito();
             })
             .catch( error => {
-                console.log("Error al crear la orden", error);
                 setError("Se produjo un error al crear la orden.");
             })
         })
         .catch((error) => {
-            console.log("No se pudo actualiza rel stock", error);
             setError("Se produjo un error al actualizar el stock.");
         })
 

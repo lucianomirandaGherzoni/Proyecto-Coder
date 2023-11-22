@@ -18,7 +18,6 @@ const ItemDetailContainer = () => {
         const nuevoProducto = { id: res.id, ...data }
         setProducto(nuevoProducto);
       })
-      .catch(error => console.log(error))
   }, [idItem])
 
 
